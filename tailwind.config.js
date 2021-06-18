@@ -6,7 +6,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      // backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+      // fontSize: ['responsive', 'hover', 'focus', 'active'],
+    },
   },
   plugins: [require('tailwind-scrollbar-hide')],
 }

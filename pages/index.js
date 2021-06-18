@@ -4,8 +4,9 @@ import Nav from '../components/Nav'
 import requests from '../utils/request'
 import Result from '../components/Result'
 
+
 export default function Home({ data }) {
-  const {results} = data
+  const { results } = data
   return (
     <div>
       <Head>
@@ -20,7 +21,8 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const genre = context.query.genre
+  const { genre } = context.query
+  
   const data = await fetch(
     `https://api.themoviedb.org/3${requests.[genre]?.url || requests.fetchTrending.url}`
   )
